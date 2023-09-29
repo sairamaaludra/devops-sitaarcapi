@@ -1,0 +1,172 @@
+{
+  "npmScope": "atb-g",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "api-accounting": {
+      "tags": []
+    },
+    "api-assets": {
+      "tags": []
+    },
+    "api-auth": {
+      "tags": []
+    },
+    "api-contact": {
+      "tags": []
+    },
+    "api-dashboard": {
+      "tags": []
+    },
+    "api-dc": {
+      "tags": []
+    },
+    "api-inventory": {
+      "tags": []
+    },
+    "api-master": {
+      "tags": []
+    },
+    "api-merchandizing": {
+      "tags": []
+    },
+    "api-migration": {
+      "tags": []
+    },
+    "api-payment": {
+      "tags": []
+    },
+    "api-product": {
+      "tags": []
+    },
+    "api-production": {
+      "tags": []
+    },
+    "api-purchase": {
+      "tags": []
+    },
+    "api-qualitycontrol": {
+      "tags": []
+    },
+    "api-reports": {
+      "tags": []
+    },
+    "api-sales": {
+      "tags": []
+    },
+    "api-setup": {
+      "tags": []
+    },
+    "api-swagger": {
+      "tags": []
+    },
+    "api-testing": {
+      "tags": []
+    },
+    "core-constants": {
+      "tags": []
+    },
+    "core-database": {
+      "tags": []
+    },
+    "core-logger": {
+      "tags": []
+    },
+    "core-queries": {
+      "tags": []
+    },
+    "core-redis": {
+      "tags": []
+    },
+    "core-report": {
+      "tags": []
+    },
+    "core-routegaurd": {
+      "tags": []
+    },
+    "core-server": {
+      "tags": []
+    },
+    "core-utils": {
+      "tags": []
+    },
+    "interfaces-api": {
+      "tags": []
+    },
+    "interfaces-library": {
+      "tags": []
+    },
+    "interfaces-service": {
+      "tags": []
+    },
+    "models-accounting": {
+      "tags": []
+    },
+    "models-asset": {
+      "tags": []
+    },
+    "models-contact": {
+      "tags": []
+    },
+    "models-dc": {
+      "tags": []
+    },
+    "models-inventory": {
+      "tags": []
+    },
+    "models-loans": {
+      "tags": []
+    },
+    "models-master": {
+      "tags": []
+    },
+    "models-merchandizing": {
+      "tags": []
+    },
+    "models-product": {
+      "tags": []
+    },
+    "models-production": {
+      "tags": []
+    },
+    "models-purchase": {
+      "tags": []
+    },
+    "models-qc": {
+      "tags": []
+    },
+    "models-sales": {
+      "tags": []
+    },
+    "models-testing": {
+      "tags": []
+    },
+    "models-transaction": {
+      "tags": []
+    }
+  }
+}

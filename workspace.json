@@ -1,0 +1,1690 @@
+{
+  "version": 2,
+  "projects": {
+    "api-accounting": {
+      "root": "apps/api-accounting",
+      "sourceRoot": "apps/api-accounting/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-accounting",
+            "main": "apps/api-accounting/src/main.ts",
+            "tsConfig": "apps/api-accounting/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-accounting/src/environments/environment.ts",
+                  "with": "apps/api-accounting/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-accounting:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-accounting/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-accounting"],
+          "options": {
+            "jestConfig": "apps/api-accounting/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-assets": {
+      "root": "apps/api-assets",
+      "sourceRoot": "apps/api-assets/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-assets",
+            "main": "apps/api-assets/src/main.ts",
+            "tsConfig": "apps/api-assets/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-assets/src/environments/environment.ts",
+                  "with": "apps/api-assets/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-assets:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-assets/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-assets"],
+          "options": {
+            "jestConfig": "apps/api-assets/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-auth": {
+      "root": "apps/api-auth",
+      "sourceRoot": "apps/api-auth/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-auth",
+            "main": "apps/api-auth/src/main.ts",
+            "tsConfig": "apps/api-auth/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-auth/src/environments/environment.ts",
+                  "with": "apps/api-auth/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-auth:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-auth/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-auth"],
+          "options": {
+            "jestConfig": "apps/api-auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-contact": {
+      "root": "apps/api-contact",
+      "sourceRoot": "apps/api-contact/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-contact",
+            "main": "apps/api-contact/src/main.ts",
+            "tsConfig": "apps/api-contact/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-contact/src/environments/environment.ts",
+                  "with": "apps/api-contact/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-contact:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-contact/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-contact"],
+          "options": {
+            "jestConfig": "apps/api-contact/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-dashboard": {
+      "root": "apps/api-dashboard",
+      "sourceRoot": "apps/api-dashboard/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-dashboard",
+            "main": "apps/api-dashboard/src/main.ts",
+            "tsConfig": "apps/api-dashboard/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-dashboard/src/environments/environment.ts",
+                  "with": "apps/api-dashboard/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-dashboard:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-dashboard/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-dashboard"],
+          "options": {
+            "jestConfig": "apps/api-dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-dc": {
+      "root": "apps/api-dc",
+      "sourceRoot": "apps/api-dc/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-dc",
+            "main": "apps/api-dc/src/main.ts",
+            "tsConfig": "apps/api-dc/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-dc/src/environments/environment.ts",
+                  "with": "apps/api-dc/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-dc:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-dc/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-dc"],
+          "options": {
+            "jestConfig": "apps/api-dc/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-inventory": {
+      "root": "apps/api-inventory",
+      "sourceRoot": "apps/api-inventory/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-inventory",
+            "main": "apps/api-inventory/src/main.ts",
+            "tsConfig": "apps/api-inventory/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-inventory/src/environments/environment.ts",
+                  "with": "apps/api-inventory/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-inventory:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-inventory/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-inventory"],
+          "options": {
+            "jestConfig": "apps/api-inventory/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-master": {
+      "root": "apps/api-master",
+      "sourceRoot": "apps/api-master/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-master",
+            "main": "apps/api-master/src/main.ts",
+            "tsConfig": "apps/api-master/tsconfig.app.json",
+            "assets": ["apps/api-master/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-master/src/environments/environment.ts",
+                  "with": "apps/api-master/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-master:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-master/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-master"],
+          "options": {
+            "jestConfig": "apps/api-master/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-merchandizing": {
+      "root": "apps/api-merchandizing",
+      "sourceRoot": "apps/api-merchandizing/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-merchandizing",
+            "main": "apps/api-merchandizing/src/main.ts",
+            "tsConfig": "apps/api-merchandizing/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-merchandizing/src/environments/environment.ts",
+                  "with": "apps/api-merchandizing/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-merchandizing:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-merchandizing/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-merchandizing"],
+          "options": {
+            "jestConfig": "apps/api-merchandizing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-migration": {
+      "root": "apps/api-migration",
+      "sourceRoot": "apps/api-migration/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/api-migration",
+            "main": "apps/api-migration/src/main.ts",
+            "tsConfig": "apps/api-migration/tsconfig.app.json",
+            "assets": ["apps/api-migration/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-migration/src/environments/environment.ts",
+                  "with": "apps/api-migration/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-migration:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-migration/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-migration"],
+          "options": {
+            "jestConfig": "apps/api-migration/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-payment": {
+      "root": "apps/api-payment",
+      "sourceRoot": "apps/api-payment/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-payment",
+            "main": "apps/api-payment/src/main.ts",
+            "tsConfig": "apps/api-payment/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-payment/src/environments/environment.ts",
+                  "with": "apps/api-payment/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-payment:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-payment/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-payment"],
+          "options": {
+            "jestConfig": "apps/api-payment/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-product": {
+      "root": "apps/api-product",
+      "sourceRoot": "apps/api-product/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-product",
+            "main": "apps/api-product/src/main.ts",
+            "tsConfig": "apps/api-product/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-product/src/environments/environment.ts",
+                  "with": "apps/api-product/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-product:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-product/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-product"],
+          "options": {
+            "jestConfig": "apps/api-product/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-production": {
+      "root": "apps/api-production",
+      "sourceRoot": "apps/api-production/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-production",
+            "main": "apps/api-production/src/main.ts",
+            "tsConfig": "apps/api-production/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-production/src/environments/environment.ts",
+                  "with": "apps/api-production/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-production:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-production/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-production"],
+          "options": {
+            "jestConfig": "apps/api-production/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-purchase": {
+      "root": "apps/api-purchase",
+      "sourceRoot": "apps/api-purchase/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-purchase",
+            "main": "apps/api-purchase/src/main.ts",
+            "tsConfig": "apps/api-purchase/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-purchase/src/environments/environment.ts",
+                  "with": "apps/api-purchase/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-purchase:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-purchase/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-purchase"],
+          "options": {
+            "jestConfig": "apps/api-purchase/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-qualitycontrol": {
+      "root": "apps/api-qualitycontrol",
+      "sourceRoot": "apps/api-qualitycontrol/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-qualitycontrol",
+            "main": "apps/api-qualitycontrol/src/main.ts",
+            "tsConfig": "apps/api-qualitycontrol/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-qualitycontrol/src/environments/environment.ts",
+                  "with": "apps/api-qualitycontrol/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-qualitycontrol:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-qualitycontrol/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-qualitycontrol"],
+          "options": {
+            "jestConfig": "apps/api-qualitycontrol/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-reports": {
+      "root": "apps/api-reports",
+      "sourceRoot": "apps/api-reports/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-reports",
+            "main": "apps/api-reports/src/main.ts",
+            "tsConfig": "apps/api-reports/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-reports/src/environments/environment.ts",
+                  "with": "apps/api-reports/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-reports:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-reports/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-reports"],
+          "options": {
+            "jestConfig": "apps/api-reports/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-sales": {
+      "root": "apps/api-sales",
+      "sourceRoot": "apps/api-sales/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-sales",
+            "main": "apps/api-sales/src/main.ts",
+            "tsConfig": "apps/api-sales/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-sales/src/environments/environment.ts",
+                  "with": "apps/api-sales/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-sales:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-sales/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-sales"],
+          "options": {
+            "jestConfig": "apps/api-sales/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-setup": {
+      "root": "apps/api-setup",
+      "sourceRoot": "apps/api-setup/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-setup",
+            "main": "apps/api-setup/src/main.ts",
+            "tsConfig": "apps/api-setup/tsconfig.app.json",
+            "assets": [
+              {
+                "input": "libs/core/report/src/asset",
+                "glob": "**/*",
+                "output": "./assets"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-setup/src/environments/environment.ts",
+                  "with": "apps/api-setup/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-setup:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-setup/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-setup"],
+          "options": {
+            "jestConfig": "apps/api-setup/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-swagger": {
+      "root": "apps/api-swagger",
+      "sourceRoot": "apps/api-swagger/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "generatePackageJson": true,
+            "outputPath": "dist/apps/api-swagger",
+            "main": "apps/api-swagger/src/main.ts",
+            "tsConfig": "apps/api-swagger/tsconfig.app.json",
+            "assets": ["apps/api-swagger/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-swagger/src/environments/environment.ts",
+                  "with": "apps/api-swagger/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-swagger:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-swagger/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-swagger"],
+          "options": {
+            "jestConfig": "apps/api-swagger/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-testing": {
+      "root": "apps/api-testing",
+      "sourceRoot": "apps/api-testing/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/api-testing",
+            "main": "apps/api-testing/src/main.ts",
+            "tsConfig": "apps/api-testing/tsconfig.app.json",
+            "assets": ["apps/api-testing/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-testing/src/environments/environment.ts",
+                  "with": "apps/api-testing/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-testing:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/api-testing/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-testing"],
+          "options": {
+            "jestConfig": "apps/api-testing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-constants": {
+      "root": "libs/core/constants",
+      "sourceRoot": "libs/core/constants/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/constants/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/constants"],
+          "options": {
+            "jestConfig": "libs/core/constants/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-database": {
+      "root": "libs/core/database",
+      "sourceRoot": "libs/core/database/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/database/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/database"],
+          "options": {
+            "jestConfig": "libs/core/database/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-logger": {
+      "root": "libs/core/logger",
+      "sourceRoot": "libs/core/logger/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/logger/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/logger"],
+          "options": {
+            "jestConfig": "libs/core/logger/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-queries": {
+      "root": "libs/core/queries",
+      "sourceRoot": "libs/core/queries/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/queries/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/queries"],
+          "options": {
+            "jestConfig": "libs/core/queries/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-redis": {
+      "root": "libs/core/redis",
+      "sourceRoot": "libs/core/redis/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/redis/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/redis"],
+          "options": {
+            "jestConfig": "libs/core/redis/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-report": {
+      "root": "libs/core/report",
+      "sourceRoot": "libs/core/report/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/report/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/report"],
+          "options": {
+            "jestConfig": "libs/core/report/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-routegaurd": {
+      "root": "libs/core/routegaurd",
+      "sourceRoot": "libs/core/routegaurd/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/routegaurd/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/routegaurd"],
+          "options": {
+            "jestConfig": "libs/core/routegaurd/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-server": {
+      "root": "libs/core/server",
+      "sourceRoot": "libs/core/server/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/server/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/server"],
+          "options": {
+            "jestConfig": "libs/core/server/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core-utils": {
+      "root": "libs/core/utils",
+      "sourceRoot": "libs/core/utils/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/utils/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/utils"],
+          "options": {
+            "jestConfig": "libs/core/utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "interfaces-api": {
+      "root": "libs/interfaces/api",
+      "sourceRoot": "libs/interfaces/api/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/interfaces/api/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/interfaces/api"],
+          "options": {
+            "jestConfig": "libs/interfaces/api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "interfaces-library": {
+      "root": "libs/interfaces/library",
+      "sourceRoot": "libs/interfaces/library/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/interfaces/library/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/interfaces/library"],
+          "options": {
+            "jestConfig": "libs/interfaces/library/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "interfaces-service": {
+      "root": "libs/interfaces/service",
+      "sourceRoot": "libs/interfaces/service/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/interfaces/service/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/interfaces/service"],
+          "options": {
+            "jestConfig": "libs/interfaces/service/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-accounting": {
+      "root": "libs/models/accounting",
+      "sourceRoot": "libs/models/accounting/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/accounting/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/accounting"],
+          "options": {
+            "jestConfig": "libs/models/accounting/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-asset": {
+      "root": "libs/models/asset",
+      "sourceRoot": "libs/models/asset/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/asset/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/asset"],
+          "options": {
+            "jestConfig": "libs/models/asset/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-contact": {
+      "root": "libs/models/contact",
+      "sourceRoot": "libs/models/contact/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/contact/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/contact"],
+          "options": {
+            "jestConfig": "libs/models/contact/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-dc": {
+      "root": "libs/models/dc",
+      "sourceRoot": "libs/models/dc/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/dc/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/dc"],
+          "options": {
+            "jestConfig": "libs/models/dc/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-inventory": {
+      "root": "libs/models/inventory",
+      "sourceRoot": "libs/models/inventory/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/inventory/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/inventory"],
+          "options": {
+            "jestConfig": "libs/models/inventory/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-loans": {
+      "root": "libs/models/loans",
+      "sourceRoot": "libs/models/loans/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/loans/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/loans"],
+          "options": {
+            "jestConfig": "libs/models/loans/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-master": {
+      "root": "libs/models/master",
+      "sourceRoot": "libs/models/master/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/master/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/master"],
+          "options": {
+            "jestConfig": "libs/models/master/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-merchandizing": {
+      "root": "libs/models/merchandizing",
+      "sourceRoot": "libs/models/merchandizing/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/merchandizing/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/merchandizing"],
+          "options": {
+            "jestConfig": "libs/models/merchandizing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-product": {
+      "root": "libs/models/product",
+      "sourceRoot": "libs/models/product/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/product/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/product"],
+          "options": {
+            "jestConfig": "libs/models/product/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-production": {
+      "root": "libs/models/production",
+      "sourceRoot": "libs/models/production/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/production/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/production"],
+          "options": {
+            "jestConfig": "libs/models/production/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-purchase": {
+      "root": "libs/models/purchase",
+      "sourceRoot": "libs/models/purchase/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/purchase/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/purchase"],
+          "options": {
+            "jestConfig": "libs/models/purchase/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-qc": {
+      "root": "libs/models/qc",
+      "sourceRoot": "libs/models/qc/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/qc/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/qc"],
+          "options": {
+            "jestConfig": "libs/models/qc/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-sales": {
+      "root": "libs/models/sales",
+      "sourceRoot": "libs/models/sales/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/sales/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/sales"],
+          "options": {
+            "jestConfig": "libs/models/sales/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-testing": {
+      "root": "libs/models/testing",
+      "sourceRoot": "libs/models/testing/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/testing/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/testing"],
+          "options": {
+            "jestConfig": "libs/models/testing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "models-transaction": {
+      "root": "libs/models/transaction",
+      "sourceRoot": "libs/models/transaction/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/models/transaction/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/models/transaction"],
+          "options": {
+            "jestConfig": "libs/models/transaction/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/node"
+  },
+  "defaultProject": "api-auth"
+}
